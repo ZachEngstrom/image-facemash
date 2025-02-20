@@ -1,3 +1,4 @@
+/* Main container for the Facemash image comparison interface */
 #facemash-container {
   display: flex;
   justify-content: center;
@@ -7,6 +8,8 @@
   margin: 0 auto;
   padding: 20px;
 }
+
+/* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
   #facemash-container {
     flex-direction: column;
@@ -14,6 +17,7 @@
   }
 }
 
+/* Rating display (hidden by default) */
 .facemash-rating {
   display: none;
   text-align: center;
@@ -21,14 +25,19 @@
   font-weight: bold;
 }
 
+/* Styling for individual image containers */
 .facemash-image {
   flex: 1;
   cursor: pointer;
   transition: transform 0.2s;
 }
+
+/* Hover effect for images */
 .facemash-image:hover {
   transform: scale(1.05);
 }
+
+/* Image styling within facemash-image */
 .facemash-image img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,6 +48,7 @@
   max-width: 100%;
 }
 
+/* Title styling above each image */
 .facemash-title {
   text-align: center;
   padding: 5px 0;
@@ -46,6 +56,7 @@
   font-size: 1.1em;
 }
 
+/* Description styling below each image */
 .facemash-description {
   text-align: center;
   padding: 5px 1rem;
@@ -53,18 +64,22 @@
   color: #555;
 }
 
+/* Container for the results table */
 #facemash-results-container {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
 }
 
+/* Row styling for results table */
 .facemash-results-row {
   display: flex;
   border-bottom: 1px solid #eee;
   padding: 10px 0;
   align-items: center;
 }
+
+/* Responsive adjustment for results rows */
 @media (max-width: 768px) {
   .facemash-results-row {
     flex-direction: column;
@@ -72,33 +87,40 @@
   }
 }
 
+/* Header row styling (not explicitly used in HTML but reserved) */
 .facemash-results-header {
   font-weight: bold;
   background-color: #f5f5f5;
   border-bottom: 2px solid #ddd;
 }
 
+/* General cell styling in results table */
 .facemash-results-cell {
   flex: 1;
   padding: 5px 10px;
 }
+
+/* Thumbnail image styling in results */
 .facemash-results-cell img {
   max-width: 80px;
   height: auto;
   border-radius: 5px;
 }
 
+/* Fixed-width thumbnail column */
 .facemash-results-th-thumbnail,
 .facemash-results-td-thumbnail {
   flex: 0 0 100px;
 }
 
+/* Description column with larger flex weight */
 .facemash-results-th-description,
 .facemash-results-td-description {
   flex: 4;
   word-wrap: break-word;
 }
 
+/* Rating column styling */
 .facemash-results-th-rating,
 .facemash-results-td-rating {
   flex: 1;
@@ -106,6 +128,7 @@
   color: #f1c40f;
 }
 
+/* Adjust description column on mobile */
 @media (max-width: 768px) {
   .facemash-results-th-description,
   .facemash-results-td-description {
@@ -113,6 +136,7 @@
   }
 }
 
+/* Adjust rating column on mobile */
 @media (max-width: 768px) {
   .facemash-results-th-rating,
   .facemash-results-td-rating {
@@ -120,12 +144,14 @@
   }
 }
 
+/* Subtext for rating (Elo score) */
 .facemash-results-td-rating span {
   margin-left: 5px;
   color: #333;
   font-size: 0.66em;
 }
 
+/* Pagination container */
 .facemash-pagination {
   margin: 20px 0;
   text-align: center;
@@ -135,6 +161,8 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+/* Responsive pagination adjustment */
 @media (max-width: 768px) {
   .facemash-pagination {
     flex-direction: column;
@@ -142,6 +170,7 @@
   }
 }
 
+/* Styling for pagination links */
 .facemash-page-link {
   padding: 8px 12px;
   text-decoration: none;
@@ -150,10 +179,13 @@
   border-radius: 4px;
   transition: background-color 0.2s;
 }
+
+/* Hover effect for pagination links */
 .facemash-page-link:hover {
   background-color: #f5f5f5;
 }
 
+/* Current page indicator */
 .facemash-page-current {
   padding: 8px 12px;
   background-color: #0073aa;
@@ -162,10 +194,12 @@
   font-weight: bold;
 }
 
+/* Ensure header rating text is readable */
 .facemash-results-th-rating {
   color: #111;
 }
 
+/* Adjust padding for title and description on mobile */
 @media (max-width: 768px) {
   .facemash-title,
   .facemash-description {
@@ -173,9 +207,10 @@
   }
 }
 
+/* Skip button styling */
 .facemash-skip-button {
   display: block;
-  margin: 20px auto 0; /* Center it below the images */
+  margin: auto;
   padding: 10px 20px;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
@@ -185,16 +220,17 @@
   color: #333;
   transition: background-color 0.2s;
   height: 5.3rem;
-  margin: auto;
 }
 
+/* Hover effect for skip button */
 .facemash-skip-button:hover {
   background-color: #e0e0e0;
 }
 
+/* Responsive skip button adjustment */
 @media (max-width: 768px) {
   .facemash-skip-button {
     width: 100%;
-    max-width: 200px; /* Optional: limit width on mobile */
+    max-width: 200px;
   }
 }
