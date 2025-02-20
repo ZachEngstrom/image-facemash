@@ -101,7 +101,7 @@ function image_facemash_results_shortcode(): string {
   $table_name = $wpdb->prefix . 'image_facemash_ratings';
 
   // Pagination settings
-  $items_per_page = 10;
+  $items_per_page = image_facemash_get_option('items_per_page', 10); // Use setting or default to 10
   $current_page = isset($_GET['fmpage']) ? max(1, intval($_GET['fmpage'])) : 1;
   $offset = ($current_page - 1) * $items_per_page;
 

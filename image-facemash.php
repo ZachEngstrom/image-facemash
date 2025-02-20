@@ -13,5 +13,6 @@ if (!defined('ABSPATH')) {
 }
 
 require_once dirname(__FILE__) . '/inc/db.php';
+require_once dirname(__FILE__) . '/inc/admin.php';
 require_once dirname(__FILE__) . '/inc/frontend.php';
 require_once dirname(__FILE__) . '/inc/ajax.php';

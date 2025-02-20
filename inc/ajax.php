@@ -46,7 +46,7 @@ function image_facemash_vote(): void {
   }
 
   // Elo rating calculation constants and formulas
-  $K = 32; // Elo rating adjustment factor
+  $K = image_facemash_get_option('elo_k_factor', 32); // Use setting or default to 32
   $expected_winner = 1 / (1 + pow(10, ($loser_rating - $winner_rating) / 400));
   $expected_loser = 1 / (1 + pow(10, ($winner_rating - $loser_rating) / 400));
 
