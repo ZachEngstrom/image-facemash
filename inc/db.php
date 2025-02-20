@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Database interactions for the Image Facemash plugin.
+ *
+ * Contains functions for retrieving images and managing ratings in the database.
+ *
+ * @package ImageFacemash
+ * @since 1.0.0
+ */
+
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly
+}
+
 // Activation hook to create database table
 register_activation_hook(__FILE__, 'image_facemash_install');
 function image_facemash_install() {

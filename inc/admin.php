@@ -1,9 +1,12 @@
 <?php
 
 /**
- * Admin settings for the Image Facemash plugin.
+ * Admin settings page for the Image Facemash plugin.
+ *
+ * Handles the creation and management of the plugin's settings page in the WordPress admin dashboard.
  *
  * @package ImageFacemash
+ * @since 1.0.0
  */
 
 if (!defined('ABSPATH')) {

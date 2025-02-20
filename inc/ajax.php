@@ -1,6 +1,19 @@
 <?php
 
 /**
+ * AJAX handlers for the Image Facemash plugin.
+ *
+ * Manages AJAX requests for voting and skipping actions, updating image ratings accordingly.
+ *
+ * @package ImageFacemash
+ * @since 1.0.0
+ */
+
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly
+}
+
+/**
  * Registers AJAX handlers for voting functionality.
  * Handles both logged-in (wp_ajax_) and non-logged-in (wp_ajax_nopriv_) users.
  */

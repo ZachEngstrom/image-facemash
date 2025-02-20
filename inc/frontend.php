@@ -1,6 +1,19 @@
 <?php
 
 /**
+ * Frontend functionality for the Image Facemash plugin.
+ *
+ * Defines shortcodes and rendering logic for the image comparison interface and results table.
+ *
+ * @package ImageFacemash
+ * @since 1.0.0
+ */
+
+if (!defined('ABSPATH')) {
+  exit; // Exit if accessed directly
+}
+
+/**
  * Enqueues the necessary styles and scripts for the Image Facemash plugin.
  *
  * @return void
