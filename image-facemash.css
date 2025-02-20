@@ -234,3 +234,22 @@
     max-width: 200px;
   }
 }
+
+/* Styling for the rank column header */
+.facemash-results-th-rank {
+  flex: 0 0 50px;
+}
+
+/* Styling for the rank column data */
+.facemash-results-td-rank {
+  flex: 0 0 50px;
+  text-align: center;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .facemash-results-th-rank,
+  .facemash-results-td-rank {
+    flex: 0 0 40px;
+  }
+}

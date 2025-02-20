@@ -144,11 +144,15 @@ function image_facemash_results_shortcode(): string {
   // Build results table
   $output = '<div id="facemash-results-container">';
   $output .= '<div class="facemash-results-row">';
+  // Add Rank header
+  $output .= '<div class="facemash-results-cell facemash-results-th-rank">Rank</div>';
   $output .= '<div class="facemash-results-cell facemash-results-th-thumbnail">Thumbnail</div>';
   $output .= '<div class="facemash-results-cell facemash-results-th-description">Description</div>';
   $output .= '<div class="facemash-results-cell facemash-results-th-rating">Rating</div>';
   $output .= '</div>';
 
+  // Counter for rank starts from the offset
+  $rank = $offset + 1;
   foreach ($results as $result) {
     $thumbnail = wp_get_attachment_image_src($result->image_id, 'thumbnail');
     $full_image_url = wp_get_attachment_url($result->image_id);
@@ -160,6 +164,8 @@ function image_facemash_results_shortcode(): string {
     $star_rating = elo_to_stars($result->rating);
 
     $output .= '<div class="facemash-results-row">';
+    // Add Rank column with current rank number
+    $output .= '<div class="facemash-results-cell facemash-results-td-rank">' . $rank . '</div>';
     $output .= '<div class="facemash-results-cell facemash-results-td-thumbnail">';
     $output .= '<a href="' . esc_url($full_image_url) . '" target="_blank">';
     $output .= '<img src="' . esc_url($thumbnail[0]) . '" alt="' . esc_attr($result->post_title) . '" title="' . esc_attr($result->post_title) . '">';
@@ -168,6 +174,8 @@ function image_facemash_results_shortcode(): string {
     $output .= '<div class="facemash-results-cell facemash-results-td-description">' . esc_attr($result->post_title) . '<br>' . wp_kses_post($result->post_content) . '</div>';
     $output .= '<div class="facemash-results-cell facemash-results-td-rating">' . $star_rating . ' <span class="small">(' . esc_html($result->rating) . ')</span></div>';
     $output .= '</div>';
+
+    $rank++; // Increment rank for the next row
   }
 
   $output .= '</div>';
