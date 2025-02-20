@@ -24,7 +24,7 @@ The **Image Facemash** plugin is a WordPress plugin that enables users to compar
 3. **Activate**: Go to **Plugins** in your WordPress admin dashboard and activate "Image Facemash".
 4. **Configure**: (Optional) Visit **Settings > Image Facemash** to adjust settings.
 
-Alternatively, package it as a `.zip` file and install via **Plugins > Add New > Upload Plugin**.
+Alternatively, package it as a `.zip` file ([download](https://gitlab.com/engza/wp-plugin-facemash/-/archive/main/wp-plugin-facemash-main.zip)) and install via **Plugins > Add New > Upload Plugin**.
 
 ## Usage
 
