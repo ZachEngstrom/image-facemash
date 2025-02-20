@@ -18,7 +18,7 @@ The **Image Facemash** plugin is a WordPress plugin that enables users to compar
 
 1. **Download**: Clone or download this repository:
    ```bash
-   git clone https://gitlab.com/engza/image-facemash.git
+   git clone https://gitlab.com/engza/wp-plugin-facemash.git
    ```
 2. **Upload**: Upload the `image-facemash` folder to your WordPress plugins directory (`/wp-content/plugins/`).
 3. **Activate**: Go to **Plugins** in your WordPress admin dashboard and activate "Image Facemash".
@@ -108,4 +108,4 @@ Developed by [Your Name]. Built with assistance from Grok (xAI).
 
 ## Issues
 
-Report bugs or suggest features via the [Gitlab Issues page](https://gitlab.com/engza/image-facemash/issues).
+Report bugs or suggest features via the [Gitlab Issues page](https://gitlab.com/engza/wp-plugin-facemash/issues).
